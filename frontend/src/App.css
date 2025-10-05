@@ -1,0 +1,44 @@
+.app {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Dans App.css ou InfoPanel.css */
+
+/* Dans App.css ou InfoPanel.css */
+
+.info-panel {
+    /* --- Positionnement et Largeur (pour récapituler le pas précédent) --- */
+    position: absolute; 
+    right: 10px;      /* Décalage à droite */
+    top: 10px;        /* Marge du haut */
+    z-index: 1000;
+    width: 350px; 
+    max-width: 100%;
+    
+    /* ----------------------------------------------------------------- */
+    
+    /* ✅ CONTRAINTE DE HAUTEUR : Limite la hauteur visible du panneau */
+    /* La formule "100vh - 20px" utilise 100% de la hauteur de la fenêtre (vh) 
+       moins la marge du haut (10px) et la marge du bas (10px). */
+    max-height: calc(85vh - 20px); 
+    
+    /* ✅ BARRE DE DÉFILEMENT : Ajoute une barre de défilement verticale 
+       uniquement lorsque le contenu dépasse le max-height défini. */
+    overflow-y: auto; 
+    
+    /* --- Styles d'apparence recommandés --- */
+    /* background: white; */
+    /* padding: 15px; */
+    /* border-radius: 8px; */
+    /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); */
+}
